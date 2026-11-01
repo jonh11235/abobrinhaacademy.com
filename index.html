@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ABOBRINHA Academy</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">ABOBRINHA<span>.</span></div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#inicio">Início</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#ferramentas">Ferramentas</a>
+            <a href="#sobre">Sobre</a>
+        </div>
+
+        <a href="#cursos" class="nav-button">
+            Começar agora →
+        </a>
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                ✦ UMA NOVA FORMA DE APRENDER
+            </span>
+
+            <h1>
+                O futuro é
+                <span>criado por você.</span>
+            </h1>
+
+            <p>
+                Explore tecnologia, programação,
+                inteligência artificial e criatividade.
+                Transforme suas ideias em realidade.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#cursos" class="primary-button">
+                    Explorar cursos →
+                </a>
+
+                <a href="#sobre" class="secondary-button">
+                    Conhecer a plataforma
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-decoration">
+            <div class="orb"></div>
+        </div>
+
+    </section>
+
+
+    <!-- ESTATÍSTICAS -->
+    <section class="stats">
+
+        <div>
+            <h2>20+</h2>
+            <p>Cursos</p>
+        </div>
+
+        <div>
+            <h2>100+</h2>
+            <p>Aulas</p>
+        </div>
+
+        <div>
+            <h2>∞</h2>
+            <p>Possibilidades</p>
+        </div>
+
+    </section>
+
+
+    <!-- CURSOS -->
+    <section class="courses section" id="cursos">
+
+        <div class="section-heading">
+
+            <span class="tag">APRENDA ALGO NOVO</span>
+
+            <h2>Explore nossos cursos.</h2>
+
+            <p>
+                Conhecimento para transformar suas ideias.
+            </p>
+
+        </div>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Pesquisar cursos..."
+        >
+
+        <div class="course-grid" id="courseGrid">
+
+            <article class="course-card">
+                <div class="course-image purple">
+                    <span>01</span>
+                    <strong>HTML / CSS / JS</strong>
+                </div>
+                <div class="course-info">
+                    <small>PROGRAMAÇÃO</small>
+                    <h3>Web Development</h3>
+                    <p>Aprenda a criar sites do zero.</p>
+                    <a href="#">Explorar curso →</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-image blue">
+                    <span>02</span>
+                    <strong>AI / ML</strong>
+                </div>
+                <div class="course-info">
+                    <small>INTELIGÊNCIA ARTIFICIAL</small>
+                    <h3>Machine Learning</h3>
+                    <p>Entenda como as máquinas aprendem.</p>
+                    <a href="#">Explorar curso →</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-image pink">
+                    <span>03</span>
+                    <strong>UNITY / C#</strong>
+                </div>
+                <div class="course-info">
+                    <small>DESENVOLVIMENTO</small>
+                    <h3>Game Development</h3>
+                    <p>Construa seus próprios jogos.</p>
+                    <a href="#">Explorar curso →</a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-image green">
+                    <span>04</span>
+                    <strong>BLENDER</strong>
+                </div>
+                <div class="course-info">
+                    <small>DESIGN 3D</small>
+                    <h3>3D Creation</h3>
+                    <p>Crie mundos e objetos tridimensionais.</p>
+                    <a href="#">Explorar curso →</a>
+                </div>
+            </article>
+
+        </div>
+
+        <p id="noResults" hidden>
+            Nenhum curso encontrado.
+        </p>
+
+    </section>
+
+
+    <!-- FERRAMENTAS -->
+    <section class="tools section" id="ferramentas">
+
+        <span class="tag">SEU LABORATÓRIO</span>
+
+        <h2>Mais do que aprender.<br>
+            É hora de criar.</h2>
+
+        <div class="tool-grid">
+
+            <div class="tool">
+                <span>✦</span>
+                <h3>AI Lab</h3>
+                <p>Experimente inteligência artificial.</p>
+            </div>
+
+            <div class="tool">
+                <span>⌘</span>
+                <h3>Code Lab</h3>
+                <p>Experimente e execute códigos.</p>
+            </div>
+
+            <div class="tool">
+                <span>◈</span>
+                <h3>Creative Lab</h3>
+                <p>Explore novas possibilidades criativas.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+    <section class="about section" id="sobre">
+
+        <span class="tag">NOSSA FILOSOFIA</span>
+
+        <h2>
+            Aprenda.
+            Experimente.
+            <span>Construa.</span>
+        </h2>
+
+        <p>
+            O conhecimento não deve ter limites.
+            Nossa missão é transformar curiosidade
+            em conhecimento e conhecimento em criação.
+        </p>
+
+        <a href="#cursos" class="primary-button">
+            Começar minha jornada →
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">ABOBRINHA<span>.</span></div>
+
+        <p>© 2026 ABOBRINHA Academy. Todos os direitos reservados.</p>
+
+    </footer>
+
+</body>
+</html>
