@@ -12,10 +12,58 @@ menuButton.addEventListener("click", () => {
 // FECHAR MENU AO CLICAR EM UM LINK
 
 document.querySelectorAll(".nav-links a").forEach(link => {
-
     link.addEventListener("click", () => {
         navLinks.classList.remove("open");
     });
+});
+
+
+// IDIOMAS
+
+const languageButton = document.getElementById("languageButton");
+
+let currentLanguage = "pt";
+
+function changeLanguage(language) {
+
+    currentLanguage = language;
+
+    document.documentElement.lang =
+        language === "pt" ? "pt-BR" : "en-US";
+
+    document.querySelectorAll("[data-pt][data-en]").forEach(element => {
+
+        element.textContent =
+            element.getAttribute(`data-${language}`);
+
+    });
+
+    const search = document.getElementById("search");
+
+    search.placeholder =
+        search.getAttribute(`data-placeholder-${language}`);
+
+    languageButton.textContent =
+        language === "pt" ? "PT | EN" : "EN | PT";
+
+    languageButton.setAttribute(
+        "aria-label",
+        language === "pt" ? "Switch to English" : "Mudar para português"
+    );
+
+    document.title =
+        language === "pt"
+            ? "ABOBRINHA Academy"
+            : "ABOBRINHA Academy";
+
+    filterCourses();
+}
+
+languageButton.addEventListener("click", () => {
+
+    changeLanguage(
+        currentLanguage === "pt" ? "en" : "pt"
+    );
 
 });
 
@@ -26,7 +74,7 @@ const search = document.getElementById("search");
 const cards = document.querySelectorAll(".course-card");
 const noResults = document.getElementById("noResults");
 
-search.addEventListener("input", () => {
+function filterCourses() {
 
     const query = search.value.toLowerCase().trim();
 
@@ -48,7 +96,9 @@ search.addEventListener("input", () => {
 
     noResults.hidden = visibleCards !== 0;
 
-});
+}
+
+search.addEventListener("input", filterCourses);
 
 
 // ANIMAÇÃO DE APARECIMENTO
@@ -80,3 +130,8 @@ document.querySelectorAll(
     observer.observe(element);
 
 });
+
+
+// IDIOMA INICIAL
+
+changeLanguage("en");
