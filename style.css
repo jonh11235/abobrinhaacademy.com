@@ -1,4 +1,3 @@
-
 /* RESET */
 
 * {
@@ -92,6 +91,43 @@ body {
     display: none;
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-button {
+    background: transparent;
+    color: white;
+    border: 1px solid #444;
+    padding: 10px 13px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.language-button:hover {
+    border-color: var(--purple);
+    color: var(--purple);
+}
+
+/* RESPONSIVIDADE DO SELETOR */
+
+@media (max-width: 800px) {
+
+    .nav-actions {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .nav-actions .nav-button {
+        display: none;
+    }
+
+}
 
 /* HERO */
 
@@ -189,7 +225,7 @@ body {
 
     box-shadow: 0 0 120px #873cff66;
 
-    animation: float 5s ease-in-out infinite;
+    animation: float 4.5s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -275,24 +311,34 @@ body {
 
 .course-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
 }
+
+/* =========================
+   COURSE CARD
+========================= */
 
 .course-card {
     background: var(--secondary);
     border: 1px solid #ffffff10;
-    border-radius: 14px;
+    border-radius: 16px;
     overflow: hidden;
 
-    transition: .3s;
+    transition: transform .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
 }
 
 .course-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     border-color: var(--purple);
     box-shadow: 0 15px 40px #0008;
 }
+
+/* =========================
+   COURSE IMAGES
+========================= */
 
 .course-image {
     height: 210px;
@@ -328,24 +374,32 @@ body {
     background: linear-gradient(135deg, #126a52, #6bd9a0);
 }
 
+/* =========================
+   COURSE INFO
+========================= */
+
 .course-info {
-    padding: 25px;
+    padding: 35px;
+    border-bottom: 1px solid #ffffff10;
 }
 
 .course-info small {
     color: var(--purple);
     font-size: 11px;
-    letter-spacing: 1px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .course-info h3 {
     margin: 12px 0;
-    font-size: 24px;
+    font-size: clamp(24px, 4vw, 32px);
+    letter-spacing: -1px;
 }
 
 .course-info p {
     color: var(--text-muted);
-    margin-bottom: 25px;
+    line-height: 1.7;
+    max-width: 650px;
 }
 
 .course-info a {
@@ -353,6 +407,212 @@ body {
     text-decoration: none;
 }
 
+/* =========================
+   WEB DEVELOPMENT
+========================= */
+
+#webdev {
+    margin: 25px;
+}
+
+.course-list {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* =========================
+   CATEGORY HEADING
+========================= */
+
+.dev-category {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.category-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.category-number {
+    color: var(--purple);
+    font-size: 18px;
+    font-weight: 800;
+
+    background: #9b70ff18;
+    border: 1px solid #9b70ff35;
+    border-radius: 10px;
+
+    padding: 13px 15px;
+}
+
+.category-heading h2 {
+    font-size: 23px;
+    margin-bottom: 6px;
+}
+
+.category-heading p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   FRONT-END LIST
+========================= */
+
+.course-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-list > .dev-category > ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.course-list li {
+    background: #ffffff06;
+    border: 1px solid #ffffff0c;
+    border-radius: 9px;
+
+    padding: 15px 18px;
+
+    color: var(--text-muted);
+    font-size: 14px;
+
+    transition: .25s ease;
+}
+
+.course-list li:hover {
+    background: #9b70ff12;
+    border-color: #9b70ff55;
+    transform: translateX(4px);
+}
+
+.course-list li strong {
+    color: white;
+    font-weight: 600;
+}
+
+.course-list li span {
+    display: block;
+    color: var(--purple);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.course-list li.more {
+    color: var(--purple);
+    font-weight: 700;
+    border-style: dashed;
+}
+
+.course-list p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+/* =========================
+   BACK-END GRID
+========================= */
+
+.backend-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.backend-item {
+    background: #ffffff05;
+    border: 1px solid #ffffff10;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.backend-item h3 {
+    font-size: 15px;
+    margin-bottom: 18px;
+    color: var(--purple);
+}
+
+.backend-item ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.backend-item li {
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.backend-item li:hover {
+    background: transparent;
+    border: none;
+    transform: translateX(4px);
+}
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #webdev {
+        margin: 12px;
+    }
+
+    .course-info,
+    .course-list {
+        padding: 22px;
+    }
+
+    .backend-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-list > .dev-category > ul {
+        grid-template-columns: 1fr;
+    }
+
+    .category-heading h2 {
+        font-size: 19px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .category-heading {
+        align-items: flex-start;
+    }
+
+    .category-number {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .course-info h3 {
+        font-size: 23px;
+    }
+
+}
 
 /* FERRAMENTAS */
 
@@ -368,6 +628,10 @@ body {
 }
 
 .tool {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
     padding: 35px;
     background: #191923;
     border: 1px solid #ffffff10;
@@ -413,6 +677,15 @@ body {
     margin: 0 auto 35px;
 }
 
+/* CURSOS */
+
+.hidden-section {
+    display: none;
+}
+
+.hidden-section:target {
+    display: block;
+}
 
 /* FOOTER */
 
