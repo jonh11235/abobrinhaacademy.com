@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
@@ -9,10 +8,10 @@
     <title>ABOBRINHA Academy</title>
 
     <link rel="stylesheet" href="style.css">
-
     <script src="script.js" defer></script>
 
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,19 +22,23 @@
         <div class="logo">ABOBRINHA<span>.</span></div>
 
         <div class="nav-links" id="navLinks">
-            <a href="#inicio">Início</a>
-            <a href="#cursos">Cursos</a>
-            <a href="#ferramentas">Ferramentas</a>
-            <a href="#sobre">Sobre</a>
+            <a href="#inicio" data-pt="Início" data-en="Home">Início</a>
+            <a href="#cursos" data-pt="Cursos" data-en="Courses">Cursos</a>
+            <a href="#ferramentas" data-pt="Ferramentas" data-en="Tools">Ferramentas</a>
+            <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
         </div>
 
-        <a href="#cursos" class="nav-button">
-            Começar agora →
-        </a>
+        <div class="nav-actions">
+            <button id="languageButton" class="language-button" aria-label="Change language">
+                PT | EN
+            </button>
 
-        <button class="menu-button" id="menuButton">
-            ☰
-        </button>
+            <a href="#cursos" class="nav-button" data-pt="Começar agora →" data-en="Get started →">
+                Começar agora →
+            </a>
+        </div>
+
+        <button class="menu-button" id="menuButton">☰</button>
 
     </nav>
 
@@ -45,16 +48,20 @@
 
         <div class="hero-content">
 
-            <span class="tag">
+            <span class="tag"
+                data-pt="✦ UMA NOVA FORMA DE APRENDER"
+                data-en="✦ A NEW WAY TO LEARN">
                 ✦ UMA NOVA FORMA DE APRENDER
             </span>
 
             <h1>
-                O futuro é
-                <span>criado por você.</span>
+                <span data-pt="O futuro é" data-en="The future is">O futuro é</span>
+                <span data-pt="criado por você." data-en="created by you.">criado por você.</span>
             </h1>
 
-            <p>
+            <p
+                data-pt="Explore tecnologia, programação, inteligência artificial e criatividade. Transforme suas ideias em realidade."
+                data-en="Explore technology, programming, artificial intelligence, and creativity. Turn your ideas into reality.">
                 Explore tecnologia, programação,
                 inteligência artificial e criatividade.
                 Transforme suas ideias em realidade.
@@ -62,11 +69,13 @@
 
             <div class="hero-buttons">
 
-                <a href="#cursos" class="primary-button">
+                <a href="#cursos" class="primary-button"
+                    data-pt="Explorar cursos →" data-en="Explore courses →">
                     Explorar cursos →
                 </a>
 
-                <a href="#sobre" class="secondary-button">
+                <a href="#sobre" class="secondary-button"
+                    data-pt="Conhecer a plataforma" data-en="Discover the platform">
                     Conhecer a plataforma
                 </a>
 
@@ -86,17 +95,17 @@
 
         <div>
             <h2>20+</h2>
-            <p>Cursos</p>
+            <p data-pt="Cursos" data-en="Courses">Cursos</p>
         </div>
 
         <div>
             <h2>100+</h2>
-            <p>Aulas</p>
+            <p data-pt="Aulas" data-en="Lessons">Aulas</p>
         </div>
 
         <div>
-            <h2>∞</h2>
-            <p>Possibilidades</p>
+            <h2 data-pt="Infinitas" data-en="Infinite">Infinitas</h2>
+            <p data-pt="Possibilidades" data-en="Possibilities">Possibilidades</p>
         </div>
 
     </section>
@@ -107,11 +116,19 @@
 
         <div class="section-heading">
 
-            <span class="tag">APRENDA ALGO NOVO</span>
+            <span class="tag"
+                data-pt="APRENDA ALGO NOVO"
+                data-en="LEARN SOMETHING NEW">
+                APRENDA ALGO NOVO
+            </span>
 
-            <h2>Explore nossos cursos.</h2>
+            <h2 data-pt="Explore nossos cursos." data-en="Explore our courses.">
+                Explore nossos cursos.
+            </h2>
 
-            <p>
+            <p
+                data-pt="Conhecimento para transformar suas ideias."
+                data-en="Knowledge to transform your ideas.">
                 Conhecimento para transformar suas ideias.
             </p>
 
@@ -121,6 +138,8 @@
             type="text"
             id="search"
             placeholder="Pesquisar cursos..."
+            data-placeholder-pt="Pesquisar cursos..."
+            data-placeholder-en="Search courses..."
         >
 
         <div class="course-grid" id="courseGrid">
@@ -131,10 +150,10 @@
                     <strong>HTML / CSS / JS</strong>
                 </div>
                 <div class="course-info">
-                    <small>PROGRAMAÇÃO</small>
+                    <small data-pt="PROGRAMAÇÃO" data-en="PROGRAMMING">PROGRAMAÇÃO</small>
                     <h3>Web Development</h3>
-                    <p>Aprenda a criar sites do zero.</p>
-                    <a href="#">Explorar curso →</a>
+                    <p data-pt="Aprenda a criar sites do zero." data-en="Learn how to build websites from scratch.">Aprenda a criar sites do zero.</p>
+                    <a href="#WDev" data-pt="Explorar curso →" data-en="Explore course →">Explorar curso →</a>
                 </div>
             </article>
 
@@ -144,10 +163,10 @@
                     <strong>AI / ML</strong>
                 </div>
                 <div class="course-info">
-                    <small>INTELIGÊNCIA ARTIFICIAL</small>
+                    <small data-pt="INTELIGÊNCIA ARTIFICIAL" data-en="ARTIFICIAL INTELLIGENCE">INTELIGÊNCIA ARTIFICIAL</small>
                     <h3>Machine Learning</h3>
-                    <p>Entenda como as máquinas aprendem.</p>
-                    <a href="#">Explorar curso →</a>
+                    <p data-pt="Entenda como as máquinas aprendem." data-en="Understand how machines learn.">Entenda como as máquinas aprendem.</p>
+                    <a href="#Mlern" data-pt="Explorar curso →" data-en="Explore course →">Explorar curso →</a>
                 </div>
             </article>
 
@@ -157,10 +176,10 @@
                     <strong>UNITY / C#</strong>
                 </div>
                 <div class="course-info">
-                    <small>DESENVOLVIMENTO</small>
+                    <small data-pt="DESENVOLVIMENTO" data-en="DEVELOPMENT">DESENVOLVIMENTO</small>
                     <h3>Game Development</h3>
-                    <p>Construa seus próprios jogos.</p>
-                    <a href="#">Explorar curso →</a>
+                    <p data-pt="Construa seus próprios jogos." data-en="Build your own games.">Construa seus próprios jogos.</p>
+                    <a href="#GDev" data-pt="Explorar curso →" data-en="Explore course →">Explorar curso →</a>
                 </div>
             </article>
 
@@ -170,18 +189,136 @@
                     <strong>BLENDER</strong>
                 </div>
                 <div class="course-info">
-                    <small>DESIGN 3D</small>
+                    <small data-pt="DESIGN 3D" data-en="3D DESIGN">DESIGN 3D</small>
                     <h3>3D Creation</h3>
-                    <p>Crie mundos e objetos tridimensionais.</p>
-                    <a href="#">Explorar curso →</a>
+                    <p data-pt="Crie mundos e objetos tridimensionais." data-en="Create 3D worlds and objects.">Crie mundos e objetos tridimensionais.</p>
+                    <a href="#3D" data-pt="Explorar curso →" data-en="Explore course →">Explorar curso →</a>
                 </div>
             </article>
 
         </div>
 
-        <p id="noResults" hidden>
+        <p id="noResults" hidden
+            data-pt="Nenhum curso encontrado."
+            data-en="No courses found.">
             Nenhum curso encontrado.
         </p>
+
+    </section>
+
+
+    <!-- CURSOS 2 -->
+
+    <section id="WDev" class="hidden-section">
+
+        <article class="course-card" id="webdev">
+
+            <div class="course-info">
+                <small data-pt="PROGRAMAÇÃO"
+                    data-en="PROGRAMMING">PROGRAMAÇÃO</small>
+
+                <h3>Web Development</h3>
+
+                <p data-pt="Aprenda a criar sites do zero, desde a estrutura até sistemas completos."
+                data-en="Learn how to build websites from scratch, from structure to complete systems.">
+                    Aprenda a criar sites do zero, desde a estrutura até sistemas completos.
+                </p>
+            </div>
+
+            <div class="course-list">
+
+                <!-- FRONT-END -->
+
+                <div class="dev-category">
+
+                    <div class="category-heading">
+                        <span class="category-number">01</span>
+                        <div>
+                            <h2>Front-End Development</h2>
+                            <p data-pt="Tudo o que o usuário vê e com que interage."
+                            data-en="Everything users see and interact with.">
+                                Tudo o que o usuário vê e com que interage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li><strong>HTML <p>(HyperText Markup Language)</p></strong> <span>Structure</span></li>
+                        <li><strong>CSS <p>(Cascading Style Sheets)</p></strong> <span>Styling</span></li>
+                        <li><strong>JavaScript <p>(JS)</p></strong> <span>Interactivity</span></li>
+                        <li><strong>Frameworks & Libraries <p></p></strong></li>
+                        <li class="more" data-pt="E muito mais!" data-en="And much more!">
+                            E muito mais!
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- BACK-END -->
+
+                <div class="dev-category">
+
+                    <div class="category-heading">
+                        <span class="category-number">02</span>
+                        <div>
+                            <h2>Back-End Development</h2>
+                            <p data-pt="A lógica, os servidores e os dados por trás dos sites."
+                            data-en="The logic, servers and data behind websites.">
+                                A lógica, os servidores e os dados por trás dos sites.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="backend-grid">
+
+                        <div class="backend-item">
+                            <h3>Server-Side Languages & Runtimes</h3>
+                            <ul>
+                                <li>PHP</li>
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </div>
+
+                        <div class="backend-item">
+                            <h3>Databases</h3>
+                            <ul>
+                                <li>SQL</li>
+                                <li>PostgreSQL</li>
+                                <li>MongoDB</li>
+                            </ul>
+                        </div>
+
+                        <div class="backend-item">
+                            <h3>APIs</h3>
+                            <ul>
+                                <li data-pt="Como o Front-End e o Back-End se comunicam para buscar e enviar dados."
+                                    data-en="How Front-End and Back-End communicate to fetch and send data.">
+                                    Como o Front-End e o Back-End se comunicam para buscar e enviar dados.
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+    <section id="Mlern" class="hidden-section">
+
+    </section>
+
+    <section id="GDev" class="hidden-section">
+
+    </section>
+
+    <section id="3D" class="hidden-section">
 
     </section>
 
@@ -189,30 +326,50 @@
     <!-- FERRAMENTAS -->
     <section class="tools section" id="ferramentas">
 
-        <span class="tag">SEU LABORATÓRIO</span>
+        <span class="tag"
+            data-pt="SEU LABORATÓRIO"
+            data-en="YOUR LAB">
+            SEU LABORATÓRIO
+        </span>
 
-        <h2>Mais do que aprender.<br>
-            É hora de criar.</h2>
+        <h2
+            data-pt="Mais do que aprender. É hora de criar."
+            data-en="More than learning. It's time to create.">
+            Mais do que aprender.<br>
+            É hora de criar.
+        </h2>
 
         <div class="tool-grid">
 
-            <div class="tool">
+            <a class="tool" href="#">
                 <span>✦</span>
                 <h3>AI Lab</h3>
-                <p>Experimente inteligência artificial.</p>
-            </div>
+                <p
+                    data-pt="Experimente inteligência artificial."
+                    data-en="Experiment with artificial intelligence.">
+                    Experimente inteligência artificial.
+                </p>
+            </a>
 
-            <div class="tool">
+            <a class="tool" href="#">
                 <span>⌘</span>
                 <h3>Code Lab</h3>
-                <p>Experimente e execute códigos.</p>
-            </div>
+                <p
+                    data-pt="Experimente e execute códigos."
+                    data-en="Experiment with and run code.">
+                    Experimente e execute códigos.
+                </p>
+            </a>
 
-            <div class="tool">
+            <a class="tool" href="#">
                 <span>◈</span>
                 <h3>Creative Lab</h3>
-                <p>Explore novas possibilidades criativas.</p>
-            </div>
+                <p
+                    data-pt="Explore novas possibilidades criativas."
+                    data-en="Explore new creative possibilities.">
+                    Explore novas possibilidades criativas.
+                </p>
+            </a>
 
         </div>
 
@@ -222,21 +379,29 @@
     <!-- SOBRE -->
     <section class="about section" id="sobre">
 
-        <span class="tag">NOSSA FILOSOFIA</span>
+        <span class="tag"
+            data-pt="NOSSA FILOSOFIA"
+            data-en="OUR PHILOSOPHY">
+            NOSSA FILOSOFIA
+        </span>
 
         <h2>
-            Aprenda.
-            Experimente.
-            <span>Construa.</span>
+            <span data-pt="Aprenda." data-en="Learn.">Aprenda.</span>
+            <span data-pt="Experimente." data-en="Experiment.">Experimente.</span>
+            <span data-pt="Construa." data-en="Build.">Construa.</span>
         </h2>
 
-        <p>
+        <p
+            data-pt="O conhecimento não deve ter limites. Nossa missão é transformar curiosidade em conhecimento e conhecimento em criação."
+            data-en="Knowledge should have no limits. Our mission is to turn curiosity into knowledge, and knowledge into creation.">
             O conhecimento não deve ter limites.
             Nossa missão é transformar curiosidade
             em conhecimento e conhecimento em criação.
         </p>
 
-        <a href="#cursos" class="primary-button">
+        <a href="#cursos" class="primary-button"
+            data-pt="Começar minha jornada →"
+            data-en="Start my journey →">
             Começar minha jornada →
         </a>
 
@@ -248,7 +413,11 @@
 
         <div class="logo">ABOBRINHA<span>.</span></div>
 
-        <p>© 2026 ABOBRINHA Academy. Todos os direitos reservados.</p>
+        <p
+            data-pt="© 2026 ABOBRINHA Academy. Todos os direitos reservados."
+            data-en="© 2026 ABOBRINHA Academy. All rights reserved.">
+            © 2026 ABOBRINHA Academy. Todos os direitos reservados.
+        </p>
 
     </footer>
 
